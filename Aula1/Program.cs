@@ -6,17 +6,29 @@ namespace Aula1
     {
         static void Main(string[] args)
         {
-            string nome, sobrenome, resultado;
+            string nome;
+            Double nota1, nota2, media;
 
-            Console.Write("Nome: ");
+            Console.Write("Seu nome: ");
             nome = Console.ReadLine();
 
-            Console.Write("Sobrenome: ");
-            sobrenome = Console.ReadLine();
+            Console.Write("Nota 1: ");
+            nota1 = Convert.ToDouble(Console.ReadLine());
 
-            resultado = nome + " " + sobrenome;
+            Console.Write("Nota 2: ");
+            nota2 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Resultado: " + resultado);
+            media = (nota1 + nota2) / 2 ;
+
+            if(media >= 7.0)
+            {
+                Console.WriteLine("Parabens " + nome + " passou, com media " + media);
+            }
+            else
+            {
+                Console.WriteLine( nome + " voce reprovou, sua media foi " + media);
+            }
+
             Console.ReadLine();
         }
     }  
